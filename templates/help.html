@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} {% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My YouTube Video</title>
+    <style>
+      iframe {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="{{ url_for('help') }}"></form>
+    <h1 style="text-align: center; margin: 0px; color: black"><b>Information about Nitrogen,Potassium and Phosphorus</b></h1> <br />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iE9P9w62l2Y" frameborder="0" allowfullscreen></iframe></br>
+    <h1 style="text-align: center; margin: 0px; color: black"><b>Amazon Link To Buy The Kit: 
+        <a href="https://amzn.to/2X35eQM" target="_blank">https://amzn.to/2X35eQM</a></b></h1> <br />
+    <h1 style="text-align: center; margin: 0px; color: black"><b>Tutorial for Crop Prediction</b></h1> <br />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/m-uug-T8Nvc" frameborder="0" allowfullscreen></iframe></br>
+    <h1 style="text-align: center; margin: 0px; color: black"><b>Tutorial for Crop Yield Prediction</b></h1> <br />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JZ6fcYD3kRU" frameborder="0" allowfullscreen></iframe></br>
+  </body>
+</html>
+{% endblock %}

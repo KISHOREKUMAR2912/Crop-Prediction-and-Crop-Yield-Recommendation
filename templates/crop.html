@@ -1,0 +1,76 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+  html body {
+    background-color: rgb(232, 194, 26);
+  }
+</style>
+<!--Form Section-->
+<br /> 
+<a href="{{ url_for('help') }}" class="btn btn-secondary" style="float: right; text-align: right;font-size: 1.2rem; margin-right: 1rem; background-color: rgb(36, 78, 230);">HELP</a> <br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Find out the most suitable crop to grow in your farm</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+<form method="POST" action="{{ url_for('crop_recommend') }}">
+  <div class="form-group">
+    <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+    <input type="number" name="nitrogen" step="0.1" class="form-control" placeholder="Enter Nitrogen content in soil" aria-label="Enter Nitrogen content in soil" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <label for="Phosphorus" style="font-size: 17px"><b>Phosphorus</b></label>
+    <input type="number" name="phosphorous" step="0.1" class="form-control" placeholder="Enter Phosphorous content in soil" aria-label="Enter Phosphorous content in soil" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <label for="Pottassium" style="font-size: 17px"><b>Pottassium</b></label>
+    <input type="number" name="potassium" step="0.1" class="form-control" placeholder="Enter Potassium content in soil" aria-label="Enter Potassium content in soil" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <label for="Temp" style="font-size: 17px"><b>Temperature</b></label>
+    <input type="number" name="temperature" step="0.1" class="form-control" placeholder="Enter Temperature in degree Celsius" aria-label="Enter Temperature in degree Celsius" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <label for="Humidity" style="font-size: 17px"><b>Humidity</b></label>
+    <input type="number" name="humidity" step="0.1" class="form-control" placeholder="Enter Humidity in %" aria-label="Enter Humidity in %" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <label for="pH" style="font-size: 17px"><b>pH</b></label>
+    <input type="number" name="ph" step="0.1" class="form-control" placeholder="Enter pH value of the soil" aria-label="Enter pH value of the soil" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <label for="Rainfall" style="font-size: 17px"><b>Rainfall</b></label>
+    <input type="number" name="rainfall" step="0.1" class="form-control" placeholder="Enter Rainfall in mm" aria-label="Enter Rainfall in mm" aria-describedby="basic-addon1">
+  </div>
+  <div class="d-flex justify-content-center">
+    <button
+      type="submit"
+      class="btn btn-info"
+      style="
+        color: black;
+        font-weight: bold;
+        width: 130px;
+        height: 50px;
+        border-radius: 12px;
+        font-size: 21px;
+      "
+    >
+      Predict
+    </button>
+  </div>
+</form>
+</div>
+
+<!-- Form section -->
+
+{% endblock %}
